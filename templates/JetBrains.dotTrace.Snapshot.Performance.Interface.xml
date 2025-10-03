@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.dotTrace.Snapshot.Performance.Interface</name>
+    </assembly>
+    <members>
+        <member name="M:JetBrains.dotTrace.Snapshot.Performance.Interface.Section.CallTree.CallTreeSectionNodeHelpers.IsInsideYourTree(JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode,JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode)">
+            <summary>
+            Check whether some snapshot node is located inside the subtree of the current node.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.Snapshot.Performance.Interface.Section.CallTree.CallTreeSectionNodeHelpers.IsInsideYourTree(JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode,JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionOffset)">
+            <summary>
+            Check whether some snapshot node offset is located inside the subtree of the current node.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.Snapshot.Performance.Interface.Section.CallTree.CallTreeSectionNodeHelpers.IsInsideYourTreeInclusive(JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode,JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionOffset)">
+            <summary>
+            Check whether some snapshot node offset is located inside the subtree of the current node 
+            including this same node.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.Snapshot.Performance.Interface.Section.CallTree.IFastSectionAsStreamReader.ReadNodesReverseFastI(JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode[],JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionOffset,System.Int32)">
+            <summary>
+            Same as ReadNodesReverseFast, with the difference that right offset node is included into the result list. Thus we retrieve
+            [0;Offset] set instead of [0;Offset)
+            </summary>
+        </member>
+    </members>
+</doc>

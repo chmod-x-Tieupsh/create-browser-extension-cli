@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.dotTrace.SnapshotsManagement</name>
+    </assembly>
+    <members>
+        <member name="P:JetBrains.dotTrace.SnapshotsManagement.ISnapshotManager.HasSnapshot">
+            <summary>
+            Property HasSnapshot is set to true RIGHT BEFORE the snapshot is started
+            to load (in comparison to CurrentSnapshot.Value which is set AFTER the 
+            snapshot has been loaded).
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapshotsManagement.ISnapshotManager.SaveSnapshotAs(JetBrains.dotTrace.SnapShotApi.ISnapshot,System.Action{JetBrains.Util.FileSystemPath},System.String)">
+            <returns>true if fie was saved, false if user pressed Cancel during snapshot saving.</returns>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapshotsManagement.ISnapshotManager.Open(JetBrains.Util.FileSystemPath,System.String,System.String)">
+            <summary>
+            Check whether the given snapshot is already loaded and if not - start standard
+            opening procedure.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapshotsManagement.ISnapshotManager.OpenAside(JetBrains.Lifetimes.Lifetime,JetBrains.Util.FileSystemPath)">
+            <summary>
+            Perform opening of a snapshot without making it a proper component container, 
+            thus initialization of its components is not performed. This is done e.g. in the case
+            of loading a snapshot for views comparison, where we need just raw snapshot data.
+            </summary>
+        </member>
+    </members>
+</doc>

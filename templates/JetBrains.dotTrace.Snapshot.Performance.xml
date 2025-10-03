@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.dotTrace.Snapshot.Performance</name>
+    </assembly>
+    <members>
+        <member name="F:JetBrains.dotTrace.Snapshot.Performance.PerformanceSnapshotReader.Magic">
+            <summary>
+            DTPF
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.Snapshot.Performance.PerformanceSnapshotReader.#ctor(JetBrains.Profiler.Snapshot.Storage.IWriteableSnapshotStorage)">
+            <summary>
+             Tests-oriented .ctor
+            </summary>
+        </member>
+        <member name="F:JetBrains.dotTrace.Snapshot.Performance.Section.HeaderSinglesSection.myPrimaryIndices">
+            <summary>
+            Collect unconverted data from raw section as it is impossible to predict
+            whether fuid convertor has been initialized properly beforehand or not.
+            All convertion from fuids to MetadataIDs is performed upon the first call to
+            indices.
+            </summary>
+        </member>
+    </members>
+</doc>

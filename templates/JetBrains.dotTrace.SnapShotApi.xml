@@ -1,0 +1,565 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.dotTrace.SnapShotApi</name>
+    </assembly>
+    <members>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Components.GainManager.GetHashCode">
+            <summary>
+            Hash code here is a mean way to save intermediate state for different action updates which can be
+            called several times per one MouseUp (e.g. AdjustTimeActionHandler-s)
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Components.GainManager.IsSingleOptimizedNode(JetBrains.dotTrace.SnapShotApi.Nodes.ICallTreeNode{JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode})">
+            <summary>
+            Determine whether this function instance was optimized as "single instance".
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Components.GainManager.IsCompletelyOptimizedNode(JetBrains.Common.Util.Metadata.FunctionId)">
+            <summary>
+            Determine whether this function instance was optimized as "all instances".
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Components.GainManager.RemoveGain(JetBrains.dotTrace.SnapShotApi.Nodes.ICallTreeNode{JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode})">
+            <summary>
+            If we have gain by ALL instances of the function with the given FId,
+            remove all of them, otherwise remove gain defined by the particular node.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Components.GainManager.RemoveGainById(JetBrains.Common.Util.Metadata.FunctionId)">
+            <summary>
+            Given the sample node, remove gains defined by ANY instance of the function
+            with the given FId
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Components.GainManager.RemoveGainByGivenId(JetBrains.Common.Util.Metadata.FunctionId)">
+            <summary>
+            Consistent removal of gain information from all reference sources at once.
+            This guarantees that we will not forget to remove info from any linked source.
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Components.HotspotsProcessing.FunctionsStatisticsInTypes.MethodInfo">
+            <summary>
+            Keeps snapshot's info about the method call (FunctionID, time) and hierarchy of types ascending to the first declaration of the method
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Components.HotspotsProcessing.FunctionsStatisticsInTypes.MethodInTypeData">
+            <summary>
+            Keeps data about single method of class/interface summarized by all calls of this method in derived classes.
+            </summary>
+        </member>
+        <member name="P:JetBrains.dotTrace.SnapShotApi.Components.HotspotsProcessing.FunctionsStatisticsInTypes.MethodInTypeData.Implementations">
+            <summary>
+            All calls of the method in derived classes with own time, system time and total time for them
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Components.HotspotsProcessing.FunctionsStatisticsInTypes.TypeInfo">
+            <summary>
+            Keeps data about some class/interface which methods or their implementations were found in snapshot
+            </summary>
+        </member>
+        <member name="P:JetBrains.dotTrace.SnapShotApi.Components.HotspotsProcessing.FunctionsStatisticsInTypes.TypeInfo.Methods">
+            <summary>
+            All methods of the class/interface with summarized statistic for them by all derived classes
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Components.HotspotsProcessing.FunctionsStatisticsInTypes.TypeInfo.UpdateMethodData(JetBrains.dotTrace.SnapShotApi.Components.HotspotsProcessing.FunctionsStatisticsInTypes.MethodInfo)">
+            <summary>Adds or update data about the method of this class/interface</summary>
+        </member>
+        <member name="F:JetBrains.dotTrace.SnapShotApi.Components.HotspotsProcessing.FunctionsStatisticsInTypes.myTypes">
+            <summary>
+            All types which can be extracted from functions calls begining from the leaf class (last in the
+            types hierarchy) up to the root class or interface where the function is firstly declared.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Components.HotspotsProcessing.FunctionsStatisticsInTypes.GetResults">
+            <summary>
+            Returns hotspots statistics by solution's classes hierarchy.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Components.SystemModulesSnapshotComponent.GetFirstUserFunctionNode(JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionOffset,JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionOffset,JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode@)">
+            <summary>
+            Return false if there is no user function between <see cref="!:leftOffset"/> and <see cref="!:rightOffset"/>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.ExposeSnapshotContainerForSnapshotToolWindowContent">
+            <summary>
+            A service component to facilitate <see cref="T:JetBrains.dotTrace.SnapShotApi.SnapshotToolWindowContent`1"/> operations.
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.IFunctionEnumeratorFilter`1">
+            <summary>
+            <c>IFunctionEnumeratorFilter</c> is used to filter out function headers 
+            during the snapshot headers or functions' ids enumeration.
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.INodeConstructor">
+            <summary>
+            This is a basic interface for all classes which perform the construction of all types of tree/list(s) nodes.
+            General strategy is to construct new type of node on the base of existing one.
+            <para>Example: construct tree node representing all instances of some function.</para>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.IStructureFilter`1">
+            <summary>
+            Structure filters are responsible e.g. for selecting children in the list 
+            of node's children.
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.IContextDependableFilter`1">
+            <summary>
+            Context-dependable structure filters require that each its user
+            takes responsibility for initiating them with relevant compare values
+            before each usage.
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.TruePredicate">
+            <summary>
+            Restricted-usage predicate
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Nodes.BacktraceThreadNode">
+            <summary>
+            Special type of ThreadStartNode which correctly computes its time (as it
+            is done in the parent class) but also prohibits its expansion since in the
+            backtraces or hotspots view it serves as a leaf node.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.BacktraceTreeNode.#ctor(System.Collections.Generic.IEnumerable{JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode},JetBrains.dotTrace.SnapShotApi.Performance.PerformanceSnapshot,System.Collections.Generic.Dictionary{JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode,System.UInt64})">
+            <summary>
+            Construct <b>TOP</b>-level backtrace node from the example node (of different view, for example)
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.BacktraceTreeNode.CreateParent2TimeMap(System.Collections.Generic.IEnumerable{JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode},System.Collections.Generic.Dictionary{JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode,System.UInt64})">
+            <summary>
+            Create a top-node's child->parents map using the storage nodes of the child.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.BacktraceTreeNode.#ctor(JetBrains.dotTrace.SnapShotApi.Nodes.HeaderNode,JetBrains.Common.Util.Metadata.FunctionId,JetBrains.dotTrace.SnapShotApi.Performance.PerformanceSnapshot,JetBrains.dotTrace.SnapShotApi.Signatures.FunctionSignature,System.Collections.Generic.Dictionary{JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode,System.UInt64})">
+            <summary>
+            Construct <b>TOP</b>-level backtrace node from the header node (of a different
+            view, for example). This separate ctor allows us not to retrieve all 
+            snapshot nodes but rather use the header node references which are already
+            stored in the header nodes.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.BacktraceTreeNode.CreateParent2TimeMap(System.Collections.Generic.IEnumerable{JetBrains.DotTrace.DalInterface.Performance.CallTreeHeader.HeaderNodeRef},System.Collections.Generic.Dictionary{JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode,System.UInt64})">
+            <summary>
+            Create a top-node's child->parents map using a sequence of the nodeRefs
+            from the header child node.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.BacktraceTreeNode.#ctor(JetBrains.dotTrace.SnapShotApi.Nodes.BacktraceTreeNode,System.Collections.Generic.IEnumerable{JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode},JetBrains.dotTrace.SnapShotApi.Performance.PerformanceSnapshot,System.Collections.Generic.Dictionary{JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode,JetBrains.Util.Pair{JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode,System.UInt64}})">
+            <summary>
+            Construct <b>non-top</b>-level backtrace node from the information which is
+            already structured in the top-level nodes.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.BacktraceTreeNode.CreateParent2TimeMap(System.Collections.Generic.Dictionary{JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode,JetBrains.Util.Pair{JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode,System.UInt64}})">
+            <summary>
+            Create a nontop-node's child->parent map using an existing map of a node's child.
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Nodes.ByOffsetComparer">
+            <summary>
+            Comparer used for storing CallTreeSectionNode(s) in HashSets.
+            </summary>
+        </member>
+        <member name="F:JetBrains.dotTrace.SnapShotApi.Nodes.PerformanceTreeNodeBase.RecursionAnalysisMode.DoNotAnalyze">
+            <summary>
+            Clear flag "IsRecursive" from the node and skips the recursion processing.
+            </summary>
+        </member>
+        <member name="F:JetBrains.dotTrace.SnapShotApi.Nodes.PerformanceTreeNodeBase.RecursionAnalysisMode.LeaveAsIs">
+            <summary>
+            Flag "IsRecursive" is set up only on the basis of the given storage nodes to
+            the node ctor. Complete recursion processing is skipped.
+            </summary>
+        </member>
+        <member name="F:JetBrains.dotTrace.SnapShotApi.Nodes.PerformanceTreeNodeBase.RecursionAnalysisMode.SelfAnalysis">
+            <summary>
+            To determine the "IsRecursive" flag value, the complete recursion processing
+            is performed.
+            </summary>
+        </member>
+        <member name="F:JetBrains.dotTrace.SnapShotApi.Nodes.PerformanceTreeNodeBase.RecursionAnalysisMode.AnalyzeInputSet">
+            <summary>
+            Given that a complete set of the storage nodes (within the particular stacktrace,
+            that is "tab") is given, "IsRecursive" flag is determined on the basis of whether
+            the computed top-nodes coinside with the given set.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.PerformanceTreeNodeBase.SelfInitializeGain">
+            <summary>
+            It is REQUIRED to call this method right after the parent ctor finishes its construction
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.PerformanceTreeNodeBase.GetChildren">
+            <summary>
+            Children must be grouped by the id.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.PerformanceTreeNodeBase.GetParents">
+            <summary>
+            Parents must be grouped by the id.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.DiffTreeNode.GetChildren">
+            <summary>
+            Children must be grouped by the id.
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Nodes.CommonRootNode">
+            <summary>
+            CommonRootNode is an agglomeration of the thread root storage nodes
+            for the "AllThreads" mode of a call tree view (as opposite, RootNode is
+            a root for the "PerThread" mode.
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Nodes.MultirootNode">
+            <summary>
+            Keep first-level children explicitely, compute the total time and calls count
+            only for top-nodes, excluding internal calls. Formal signature coinsides with that of
+            the first child node, but the symbolic representation is taken only for the whole class.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.MultirootNode.CreateNode(System.Collections.Generic.IEnumerable{JetBrains.dotTrace.SnapShotApi.Nodes.ICallTreeNode{JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode}},JetBrains.dotTrace.SnapShotApi.Performance.PerformanceSnapshot)">
+            <summary>
+            Explicitely compute time and calls for different combinations of input children.
+            Goal is to avoid "TreeNode.GetStorageNodes()" as much as possible.
+            NB: We can not compute overall top nodes relationship for all public methods
+                (that is if they call each other, we tend to add some extra time to the
+                 summary class time).
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Nodes.MultirootNode.NodeInfo">
+            <summary>
+            Since Multiroot node uses a pre-computed set of children, all of them need to be
+            updated manually when new Delta value is submitted, e.g. as the result of Gain
+            computation. This instance of the NodeInfo does that.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.HeaderNode.ForContentDo(System.Action{JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode})">
+            <summary>
+            Iterate over the references in all Headers, create nodes from refs, but instead of collecting them in an array, 
+            directly apply an action to remove possible OOM exception.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.HeaderNode.ForHeaderRefNodeDirectDo(System.Action{JetBrains.DotTrace.DalInterface.Performance.CallTreeHeader.HeaderNodeRef,JetBrains.DotTrace.DalInterface.Performance.CallTreeHeader.IHeaderDataNode},JetBrains.Common.Util.IExecutionControllerOld)">
+            <summary>
+            Ensure that all HeaderNodeRefs are oredered ascendigly based on their CallTreeSectionOffset:
+            - headers are read in direct order, node refs are returned in the reverse order.
+            </summary>
+        </member>
+        <member name="P:JetBrains.dotTrace.SnapShotApi.Nodes.DiffNodeCtor.NormalizingRatio">
+            <summary>
+            Describes a factor which changes total time of a function when # of calls differs in two nodes forming a diffnode.
+            The factor is applied to all diff nodes created with this ctor.
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Nodes.IHierarchyNode`1">
+            <summary>
+            IHierarchyNode represents relationship between (possibly aggregated, grouped
+            or else preprocessed) snapshot nodes corresponding to function instances
+            calls of each other.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.IHierarchyNode`1.CanExpand(System.Predicate{JetBrains.dotTrace.SnapShotApi.Nodes.ICallTreeNode{`0}})">
+            <summary>
+            Difference between this method and the previous one is in the predicate which
+            causes to return "true" on the first element which satisfies the predicate.
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode">
+            <summary>
+            IMeasureNode aggregates all numeric information collected with each structure node
+            </summary>
+        </member>
+        <member name="P:JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode.Time">
+            <summary>
+            Field represents "total time" spent in the function and ALL subfunctions below it,
+            that is it is the time of the whole subtree.
+            Time keeps everything in "natural" computer units (e.g. in ticks).
+            </summary>
+        </member>
+        <member name="P:JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode.Delta">
+            <summary>
+            A value which affects node's position in the tree (via NodeBy*Comparer) and
+            the actual value shown in the *Presenters classes.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode.SetModifiedTime(System.Int64)">
+            <summary>
+            Sometimes a (derived) tree node can compute its total time only after some
+            transformations or analysis of its children, that is after the initial time
+            was already initialized by the base class. For this purspose change of the
+            inherent properties of the node is done explicitely.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode.ClearRecursionByOracle">
+            <summary>
+            Our major recursion analysis problem (with complex recursion topology, intersecting its branches)
+            requires that its sign (IsRecursive) is analyzed externally from the node (since the node itself
+            does not know its context, that is how its parent is folded so what this node is constructed from).
+            </summary>
+        </member>
+        <member name="P:JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode.IsRecursionIncomplete">
+            <summary>
+            In the case if mixed recursion tree during the analysis whether the node is REALLY recursive
+            we might come into decision that some nodes are achievable from the given one when being folded,
+            while some other are not. This attribute indicates that folding has to be done with some filtering
+            depending on the current folding.
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Nodes.IGainChangeableNode">
+            <summary>
+            Interface is a hack for updating nodes from an inproper place.
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Nodes.ISNodesCollection">
+            <summary>
+            This interface defines the MOST generic properties of the collection
+            of snapshot nodes. The objective is to abstract as much as possible from
+            the structure of the snapshot node and to be able to operate with the set
+            of them on more generic level.
+            NB: currently the only well-defined property is the computation of hash
+            function.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.AllFunctionCallsUnderRootConstructor.AssertFidsEqual(JetBrains.dotTrace.SnapShotApi.Nodes.ICallTreeNode{JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode})">
+            <summary>
+            Ensure that all storage nodes which consistute the given ICallTreeNode[IMeasureNode] have
+            the same id.
+            NB: A little bit strange iteration method is implemented to accomodate the case
+            when a node has no storage nodes at all (e.g. root or other artificial nodes).
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.TopNodesIterations.ForEachTopNodeReversed(JetBrains.dotTrace.SnapShotApi.Nodes.ICallTreeNode{JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode},System.Action{JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode})">
+            <summary>
+            Iterate over the set of top nodes in its REVERSED direction, that is from the biggest offset to the lowest
+            For Header nodes use knowledge about its internal structure to minimize memory allocations and extra sorts
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.TopNodesIterations.ForEachTopNodeDirect(JetBrains.dotTrace.SnapShotApi.Nodes.ICallTreeNode{JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode},System.Action{JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode},JetBrains.Common.Util.IExecutionControllerOld)">
+            <summary>
+            Iterate over the set of top nodes in its STRAIGHT direction, that is from the lowest offset to the biggest.
+            For Header nodes use knowledge about its internal structure to minimize memory allocations and extra sorts
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Nodes.NodeLogic">
+            <summary>
+            NodeLogic contains extension methods for unification of different
+            operations over the miscellaneous classes within the ICallTreeNode(IMeasureNode)
+            hierarchy. It seems however that these methods more indicate that we have a design
+            flow and all this fluff should be refactored.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.NodeLogic.ForStorageNodesDo(JetBrains.dotTrace.SnapShotApi.Nodes.ICallTreeNode{JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode},System.Action{JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode})">
+            <summary>
+            Method performs a single action for all storage nodes of the nodes without
+            constructing a (potentially) huge array of CallTreeSectionNode instances, thus
+            avoiding OutOfMemory exception.
+            <para><B>NB: order of <i>action</i> application is indeterminate in general case.</B></para>
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.NodeLogic.HasTopNodesImplicitely(JetBrains.dotTrace.SnapShotApi.Nodes.ICallTreeNode{JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode})">
+            <summary>
+            Determine whether there exist an implicit (even partial) hierarchy within a list of snapshot nodes.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.NodeLogic.ContainsUnderTop(JetBrains.dotTrace.SnapShotApi.Performance.PerformanceSnapshot,System.Collections.Generic.List{JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode},JetBrains.Common.Util.Metadata.FunctionId,JetBrains.DataFlow.Property{System.Boolean})">
+            <summary>
+            Fast version which does not compute top-nodes set inside
+            the PerformanceSnapshot.IsContainedUnderRoot. Instead it passes this set as-is.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.NodeLogic.Contains(JetBrains.dotTrace.SnapShotApi.Nodes.ICallTreeNode{JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode},JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode)">
+            <summary>
+            If the <paramref name="node"/> is an ordinary node, then operation is
+            just a simple seek over the storage nodes it contains.
+            Otherwise, if the node is a root node (which has no defined storage nodes)
+            we need to seek any of its thread ones.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Nodes.NodeLogic.ForAllChildFids(JetBrains.dotTrace.SnapShotApi.Nodes.ICallTreeNode{JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode},System.Predicate{JetBrains.Common.Util.Metadata.FunctionId})">
+            <summary>
+            Iterate over all ChildRef structures of all storage nodes contained in the
+            given ICallTreeNode, and check that all ChildRef.ChilMethodId's conform
+            to a given predicate. This is a workaround of a standard method in which
+            we usually load CallTreeSectionNode by a child offset and then checked the
+            same predicate over the result structure, that is it's much faster than:
+            node.GetChildren().All( child => func( child.FId() ))) )
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Performance.PerformanceSnapshot.LockWithMe(JetBrains.Util.FileSystemPath)">
+            <summary>
+            Small hack for our "saving" snapshot system. In fact we don't save currently opened snapshot but exporting the data and continue to work
+            with the temporary one. It leads that it's possible to delete saved snapshot file. This method allow to lock such file till the current
+            temporary snapshot is opened.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Performance.PerformanceSnapshot.HeaderEnumerator">
+            <summary>
+            First we emit those header sets which
+            correspond to precomputed indices inside the groups array.
+            Second, iterate over all groups and collect orthogonal arrays (per function) and
+            emit them afterwards.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Performance.PerformanceSnapshot.IsFidIncluded(JetBrains.Common.Util.Metadata.FunctionId,System.Collections.Generic.HashSet{System.Int32})">
+            <summary>
+            Analyze an intersection of the given set of section indices (e.g. from the root node
+            when producing a slice) with the section indices for the given IFId.
+            Using strict matching mechanism for the functions which have short Profile (less 
+            than 5 entries in the indices) and heuristic matching for those which have larger
+            profiles - if sets are POTENTIALLY intersec we return YES.
+            NB: Output parameter "passedSectionIndices" is dummy currently.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Performance.PerformanceSnapshot.IsNodeUnderOtherNodeFast(JetBrains.dotTrace.SnapShotApi.Nodes.ICallTreeNode{JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode},JetBrains.dotTrace.SnapShotApi.Nodes.ICallTreeNode{JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode})">
+            <summary>
+            Check whether a "node" is under the "parent". Using fast technique which checks only the
+            first storageNode of the given node - if it's under any of the parent storageNodes, return TRUE.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Performance.PerformanceSnapshot.LoadFunctionNode(JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionOffset)">
+            <summary>
+            Load the FunctionNode section from the current offset in the files.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Performance.PerformanceSnapshot.LoadFunctionNodeUncached(JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionOffset)">
+            <summary>
+            Load the FunctionNode section from the current offset in the files.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Performance.PerformanceSnapshot.LoadNodesUnderRoot(JetBrains.dotTrace.SnapShotApi.Nodes.ICallTreeNode{JetBrains.dotTrace.SnapShotApi.Nodes.IMeasureNode},JetBrains.Common.Util.Metadata.FunctionId,System.Nullable{System.Int32})">
+            <summary>
+            Find all nodes with id=<paramref name="fid"/> under the root node(s)
+            stored in the <paramref name="root"/>.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Performance.PerformanceSnapshot.LoadNodesUnderRoots(System.Collections.Generic.IEnumerable{JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionNode},JetBrains.Common.Util.Metadata.FunctionId,System.Nullable{System.Int32})">
+            <summary>
+            Find all nodes with id=<paramref name="fId"/> under the root node(s)
+            stored in the <paramref name="roots"/>.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Performance.PerformanceSnapshot.ForbidCache(JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionOffset)">
+            <summary>
+            Forbid caching the requested results in a cache, specific to a
+            particular CallTree section.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Performance.PerformanceSnapshot.RestoreCache(JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionOffset,System.Boolean)">
+            <summary>
+            Enable caching (back) of the requested results in a cache, specific to a
+            particular CallTree section.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Performance.PerformanceSnapshot.EnumerateAllFunctions(JetBrains.Application.Progress.IProgressIndicator)">
+            <summary>
+            Debugging-oriented function
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Persistence.IRestorativeState`1">
+            <summary>
+            Can restore the target object
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Persistence.IRestorativeState`2">
+            <summary>
+            Can restore target object using some context of type P
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="P"></typeparam>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Persistence.IState">
+            <summary>
+            Represents a state of some
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Persistence.IStateAppliable`1">
+            <summary>
+            Can collect and apply state of type T
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Persistence.IStateful`1">
+            <summary>
+            Represents an object that can gather its state
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.Providers.ISnapshotProcessor">
+            <summary>
+            A ISnapshotProcessor-derived class is a piece of code which is called 
+            automatically when all components of the snapshot are injected and configured
+            properly after Snapshot.ComponentContainer.Compose is called.
+            Each postprocessor component has an access to its own progress indicator to
+            visualize its progress.
+            Post processing classes are collected in <see cref="!:SnapshotProcessingDriver"/>
+            TODO: add priority if necessary.
+            </summary>
+        </member>
+        <member name="F:JetBrains.dotTrace.SnapShotApi.Signatures.FunctionSignature.Options.QualifiedFunction">
+            <summary>
+            Contains namespace and class name in the description
+            </summary>
+        </member>
+        <member name="F:JetBrains.dotTrace.SnapShotApi.Signatures.FunctionSignature.Options.LongPresentable">
+            <summary>
+            Contains namespace, class name, list of parameters and interface implementation
+            </summary>
+        </member>
+        <member name="F:JetBrains.dotTrace.SnapShotApi.Signatures.FunctionSignature.Options.Presentable">
+            <summary>
+            Contains namespace, class name, list of parameters
+            </summary>
+        </member>
+        <member name="F:JetBrains.dotTrace.SnapShotApi.Signatures.FunctionSignature.Options.NormalizedPresentable">
+            <summary>
+            Contains namespace, class name, list of parameters
+            </summary>
+        </member>
+        <member name="F:JetBrains.dotTrace.SnapShotApi.Signatures.FunctionSignature.Options.ShortPresentable">
+            <summary>
+            Contains only class name and list of parameters
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Signatures.FunctionSignature.#ctor(System.String,JetBrains.DotTrace.DalInterface.Performance.CallTree.ThreadFlags)">
+            <summary>
+            For "ThreadStart" nodes and "ALL THREADS" node
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Signatures.FunctionSignature.#ctor(JetBrains.dotTrace.SnapShotApi.Signatures.ClassSignature,System.String)">
+            <summary>
+            For synthetic FUIDs like "[Failed to extract metadata...]", and groupping nodes in PlainView and UtrView
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Signatures.FunctionSignature.#ctor(JetBrains.dotTrace.SnapShotApi.Signatures.ClassSignature,System.String,JetBrains.Common.Util.Metadata.FunctionId,JetBrains.Profiler.Snapshot.Interface.Section.SectionIndex{JetBrains.Profiler.Snapshot.Interface.Section.Metadata.IMetadataSection},JetBrains.Metadata.Access.MetadataToken)">
+            <summary>
+            For KnownFUId names (like KnownFunctionId.AppDomainShutdownCallId=="[Shutdown of application domain]") or 
+            special signature identifying a failure during the metadata extraction (ClassSignature.Unknown=="[Failed to extract metadata]")
+            
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.Signatures.FunctionSignature.#ctor(JetBrains.dotTrace.SnapShotApi.Signatures.ClassSignature,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,JetBrains.Common.Util.Metadata.FunctionId,JetBrains.Profiler.Snapshot.Interface.Section.ModulePath.IModulePathSection,JetBrains.Profiler.Snapshot.Interface.Section.Metadata.IMetadataSection,JetBrains.DotTrace.DalInterface.SnapshotDataApi.Metadata.IAdvancedMethodInfoProviderAccessor)">
+            <summary>
+            For general construction of Signatures -> interactively extracted signature for a call tree, where all fields are extracted at once.
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotTrace.SnapShotApi.SnapshotToolWindowContent`1">
+            <summary>
+            Can be used for tool windows whose content object (for first instance or empty content) needs snapshot components for their factoring.
+            Wrap with this type so that your factory would only be called when snapshot components are available, and in context of the snapshot container.
+            </summary>
+        </member>
+        <member name="M:JetBrains.dotTrace.SnapShotApi.SnapshotToolWindowContent`1.#ctor(JetBrains.Lifetimes.Lifetime,JetBrains.Application.Components.Optional{JetBrains.Application.UI.ToolWindowManagement.ToolWindowInstance},JetBrains.dotTrace.SnapShotApi.ExposeSnapshotContainerForSnapshotToolWindowContent,JetBrains.Application.Components.IAsyncComposeManager,JetBrains.Application.Threading.IThreading)">
+            <summary>
+            Can be used for tool windows whose content object (for first instance or empty content) needs snapshot components for their factoring.
+            Wrap with this type so that your factory would only be called when snapshot components are available, and in context of the snapshot container.
+            </summary>
+        </member>
+    </members>
+</doc>

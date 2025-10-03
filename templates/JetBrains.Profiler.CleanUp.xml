@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Profiler.CleanUp</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.Profiler.CleanUp.Impl.CleanUpHostApplicationActivator">
+            <summary>
+              Activates an intermediate application zone instead of the specific zones to avoid activator side-effects on those
+              zones, like also activating all inheritors.
+            </summary>
+        </member>
+    </members>
+</doc>

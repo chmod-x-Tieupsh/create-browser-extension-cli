@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Common.APM</name>
+    </assembly>
+    <members>
+        <member name="M:JetBrains.Common.APM.AsyncTaskDispatcher.#ctor(System.Int32,JetBrains.Lifetimes.Lifetime,System.Func{JetBrains.Common.Util.ITask,JetBrains.Common.APM.ITaskController})">
+            <summary>
+            For unit tests, in order to mock TaskController
+            </summary>
+        </member>
+        <member name="T:JetBrains.Common.APM.ITaskController">
+            <summary>
+            Interface used by AsyncTaskDispatcher for control TaskController and react its changes.
+            </summary>
+        </member>
+        <member name="E:JetBrains.Common.APM.ITaskController.ReadyForCaptureResource">
+            <summary>
+            Raised when task switch to state when it is ready to capture resources. Forces AsyncTaskDispatcher to start resources allocation.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Common.APM.Interface</name>
+    </assembly>
+    <members>
+        <member name="M:JetBrains.Common.APM.Interface.DataProviderEx.ToAPM``1(JetBrains.Common.Util.DataPipes.IThreadSwitch{``0},JetBrains.Common.APM.Interface.IAsyncTaskDispatcher,System.String)">
+            <summary>
+            Switches pipe data transformation onto <see cref="T:JetBrains.Common.APM.Interface.IAsyncTaskDispatcher"/>
+            </summary>
+        </member>
+        <member name="M:JetBrains.Common.APM.Interface.DataProviderEx.ToAPM``1(JetBrains.Common.Util.DataPipes.IThreadSwitch{``0},JetBrains.Common.APM.Interface.IAsyncTaskDispatcher,JetBrains.Common.Util.DataPipes.DataPipeLifetime,System.Object,System.String)">
+            <summary>
+            Switches pipe data transformation onto <see cref="T:JetBrains.Common.APM.Interface.IAsyncTaskDispatcher"/>
+            </summary>
+            <param name="lifetime">All tasks executing asynchronously will be canceled synchronously on terminating of this lifetime</param>
+            <param name="taskId">The id of the task in terms of <see cref="T:JetBrains.Common.APM.Interface.IAsyncTaskDispatcher"/> to pass into <see cref="M:JetBrains.Common.APM.Interface.IAsyncTaskDispatcher.MoveToHead(System.Object)"/> method</param>
+        </member>
+    </members>
+</doc>

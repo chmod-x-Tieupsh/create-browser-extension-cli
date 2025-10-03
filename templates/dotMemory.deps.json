@@ -1,0 +1,1077 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "BeatyBit.Armature/1": {
+        "runtimeTargets": {
+          "../../plugins/dotCommon/DotFiles/NetCore/BeatyBit.Armature.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.0.0.22"
+          }
+        }
+      },
+      "BeatyBit.Armature.Core/1": {
+        "runtimeTargets": {
+          "../../plugins/dotCommon/DotFiles/NetCore/BeatyBit.Armature.Core.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.0.0.22"
+          }
+        }
+      },
+      "BeatyBit.Armature.Interface/1": {
+        "runtimeTargets": {
+          "../../plugins/dotCommon/DotFiles/NetCore/BeatyBit.Armature.Interface.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.0.0.22"
+          }
+        }
+      },
+      "BouncyCastle.Cryptography/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/BouncyCastle.Cryptography.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.0.0.0"
+          }
+        }
+      },
+      "Castle.Core/1": {
+        "runtimeTargets": {
+          "../../plugins/dotCommon/DotFiles/NetCore/Castle.Core.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0"
+          }
+        }
+      },
+      "Google.FlatBuffers/1": {
+        "runtimeTargets": {
+          "../../plugins/dotCommon/DotFiles/NetCore/Google.FlatBuffers.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "1.0.0.0"
+          }
+        }
+      },
+      "JetBrains.Annotations/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/JetBrains.Annotations.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "4242.42.42.42"
+          }
+        }
+      },
+      "JetBrains.DynamicData/1": {
+        "runtimeTargets": {
+          "../../plugins/dotCommon/DotFiles/NetCore/DynamicData.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.16.0.0"
+          }
+        }
+      },
+      "JetBrains.FormatRipper/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/JetBrains.FormatRipper.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.4.0.0"
+          }
+        }
+      },
+      "JetBrains.HabitatDetector/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/JetBrains.HabitatDetector.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "1.4.4.0"
+          }
+        }
+      },
+      "JetBrains.Lifetimes/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/JetBrains.Lifetimes.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "777.0.0.0"
+          }
+        }
+      },
+      "JetBrains.Microsoft.Diagnostics.Runtime/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/JetBrains.Microsoft.Diagnostics.Runtime.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.3.11.301"
+          }
+        }
+      },
+      "JetBrains.Microsoft.FileFormats/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/Microsoft.FileFormats.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "1.0.3.601"
+          }
+        }
+      },
+      "JetBrains.Microsoft.SymbolStore/1": {
+        "runtimeTargets": {
+          "../../plugins/dotTrace.dotMemory/DotFiles/NetCore/Microsoft.SymbolStore.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "1.0.3.601"
+          }
+        }
+      },
+      "JetBrains.NuGet.Commands/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/NuGet.Commands.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.14.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.Common/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/NuGet.Common.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.14.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.Configurations/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/NuGet.Configuration.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.14.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.Credentials/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/NuGet.Credentials.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.14.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.DependencyResolver.Core/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/NuGet.DependencyResolver.Core.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.14.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.Frameworks/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/NuGet.Frameworks.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.14.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.LibraryModel/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/NuGet.LibraryModel.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.14.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.PackageManagement/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/NuGet.PackageManagement.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.14.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.Packaging/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/NuGet.Packaging.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.14.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.ProjectModel/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/NuGet.ProjectModel.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.14.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.Protocol/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/NuGet.Protocol.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.14.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.Resolver/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/NuGet.Resolver.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.14.0.32767"
+          }
+        }
+      },
+      "JetBrains.NuGet.Versioning/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/NuGet.Versioning.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.14.0.32767"
+          }
+        }
+      },
+      "JetBrains.Profiler.Api/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/JetBrains.Profiler.Api.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "1.4.9.0"
+          }
+        }
+      },
+      "JetBrains.Profiler.SelfApi/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/JetBrains.Profiler.SelfApi.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.5.13.0"
+          }
+        }
+      },
+      "JetBrains.RdFramework/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/JetBrains.RdFramework.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "777.0.0.0"
+          }
+        }
+      },
+      "JetBrains.RdFramework.Reflection/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/JetBrains.RdFramework.Reflection.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "777.0.0.0"
+          }
+        }
+      },
+      "JetBrains.Roslyn.References.Repack/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/Microsoft.CodeAnalysis.CSharp.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "42.42.42.42"
+          },
+          "../../lib/ReSharperHost/NetCore/Microsoft.CodeAnalysis.CSharp.Features.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "42.42.42.42"
+          },
+          "../../lib/ReSharperHost/NetCore/Microsoft.CodeAnalysis.CSharp.Scripting.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "42.42.42.42"
+          },
+          "../../lib/ReSharperHost/NetCore/Microsoft.CodeAnalysis.CSharp.Workspaces.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "42.42.42.42"
+          },
+          "../../lib/ReSharperHost/NetCore/Microsoft.CodeAnalysis.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "42.42.42.42"
+          },
+          "../../lib/ReSharperHost/NetCore/Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "42.42.42.42"
+          },
+          "../../lib/ReSharperHost/NetCore/Microsoft.CodeAnalysis.Features.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "42.42.42.42"
+          },
+          "../../lib/ReSharperHost/NetCore/Microsoft.CodeAnalysis.Scripting.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "42.42.42.42"
+          },
+          "../../lib/ReSharperHost/NetCore/Microsoft.CodeAnalysis.VisualBasic.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "42.42.42.42"
+          },
+          "../../lib/ReSharperHost/NetCore/Microsoft.CodeAnalysis.VisualBasic.Features.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "42.42.42.42"
+          },
+          "../../lib/ReSharperHost/NetCore/Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "42.42.42.42"
+          },
+          "../../lib/ReSharperHost/NetCore/Microsoft.CodeAnalysis.Workspaces.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "42.42.42.42"
+          }
+        }
+      },
+      "JetBrains.System.Xaml/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.Xaml.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0"
+          }
+        }
+      },
+      "JetBrains.WindowsDesktop.Mock.Runtime/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/Microsoft.VisualBasic.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "10.0.0.0"
+          },
+          "../../lib/ReSharperHost/NetCore/runtimes/unix/lib/netcoreapp3.0/PresentationCore.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0"
+          },
+          "../../lib/ReSharperHost/NetCore/runtimes/unix/lib/netcoreapp3.0/PresentationFramework.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0"
+          },
+          "../../lib/ReSharperHost/NetCore/System.Design.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0"
+          },
+          "../../lib/ReSharperHost/NetCore/runtimes/unix/lib/netcoreapp3.0/System.Web.Services.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0"
+          },
+          "../../lib/ReSharperHost/NetCore/runtimes/unix/lib/netcoreapp3.0/System.Windows.Forms.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0"
+          },
+          "../../lib/ReSharperHost/NetCore/runtimes/unix/lib/netcoreapp3.0/System.Windows.Interactivity.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0"
+          },
+          "../../lib/ReSharperHost/NetCore/runtimes/unix/lib/netcoreapp3.0/WindowsBase.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "777.0.0.0"
+          }
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyModel/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/Microsoft.Extensions.DependencyModel.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "3.0.0.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Abstractions/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/Microsoft.Extensions.FileProviders.Abstractions.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.FileSystemGlobbing/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/Microsoft.Extensions.FileSystemGlobbing.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/Microsoft.Extensions.Primitives.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Abstractions/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/Microsoft.IdentityModel.Abstractions.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.35.0.0"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.JsonWebTokens/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/Microsoft.IdentityModel.JsonWebTokens.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.35.0.0"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Logging/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/Microsoft.IdentityModel.Logging.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.35.0.0"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Tokens/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/Microsoft.IdentityModel.Tokens.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.35.0.0"
+          }
+        }
+      },
+      "Microsoft.Web.Xdt/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/Microsoft.Web.XmlTransform.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "3.0.0.34420"
+          }
+        }
+      },
+      "Mono.Cecil/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/Mono.Cecil.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "0.11.5.0"
+          },
+          "../../lib/ReSharperHost/NetCore/Mono.Cecil.Mdb.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "0.11.5.0"
+          },
+          "../../lib/ReSharperHost/NetCore/Mono.Cecil.Pdb.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "0.11.5.0"
+          },
+          "../../lib/ReSharperHost/NetCore/Mono.Cecil.Rocks.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "0.11.5.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/Newtonsoft.Json.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "13.0.0.0"
+          }
+        }
+      },
+      "plist-cil/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/plist-cil.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.2.0.0"
+          }
+        }
+      },
+      "Sprache.JetBrains/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/Sprache.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2.3.1.0"
+          }
+        }
+      },
+      "System.CodeDom/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.CodeDom.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0"
+          }
+        }
+      },
+      "System.Collections.Immutable/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.Collections.Immutable.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0"
+          }
+        }
+      },
+      "System.Configuration.ConfigurationManager/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.Configuration.ConfigurationManager.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0"
+          }
+        }
+      },
+      "System.Drawing.Common/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.Drawing.Common.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0"
+          }
+        }
+      },
+      "System.IO.FileSystem.AccessControl/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.IO.FileSystem.AccessControl.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          },
+          "../../lib/ReSharperHost/NetCore/runtimes/win/lib/netstandard2.0/System.IO.FileSystem.AccessControl.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          }
+        }
+      },
+      "System.IO.Packaging/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.IO.Packaging.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0"
+          }
+        }
+      },
+      "System.Reflection.Metadata/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.Reflection.Metadata.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.Runtime.CompilerServices.Unsafe.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0"
+          }
+        }
+      },
+      "System.Runtime.InteropServices.RuntimeInformation/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.Runtime.InteropServices.RuntimeInformation.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.1.0"
+          },
+          "../../lib/ReSharperHost/NetCore/runtimes/unix/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.1.0"
+          },
+          "../../lib/ReSharperHost/NetCore/runtimes/win/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.1.0"
+          }
+        }
+      },
+      "System.Security.AccessControl/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.Security.AccessControl.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0"
+          },
+          "../../lib/ReSharperHost/NetCore/runtimes/win/lib/netstandard2.0/System.Security.AccessControl.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0"
+          }
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0"
+          }
+        }
+      },
+      "System.Security.Permissions/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.Security.Permissions.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0"
+          }
+        }
+      },
+      "System.Security.Principal.Windows/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.Security.Principal.Windows.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          },
+          "../../lib/ReSharperHost/NetCore/runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          },
+          "../../lib/ReSharperHost/NetCore/runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0"
+          }
+        }
+      },
+      "System.ServiceProcess.ServiceController/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/runtimes/unix/lib/netstandard1.5/System.ServiceProcess.ServiceController.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.1.0.0"
+          },
+          "../../lib/ReSharperHost/NetCore/runtimes/win/lib/netstandard1.5/System.ServiceProcess.ServiceController.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.1.0.0"
+          }
+        }
+      },
+      "System.Text.Encoding.CodePages/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.Text.Encoding.CodePages.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0"
+          }
+        }
+      },
+      "System.Text.Encodings.Web/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.Text.Encodings.Web.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0"
+          }
+        }
+      },
+      "System.Text.Json/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.Text.Json.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0"
+          }
+        }
+      },
+      "System.Threading.Channels/1": {
+        "runtimeTargets": {
+          "../../lib/ReSharperHost/NetCore/System.Threading.Channels.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BeatyBit.Armature/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "BeatyBit.Armature.Core/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "BeatyBit.Armature.Interface/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "BouncyCastle.Cryptography/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Castle.Core/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Google.FlatBuffers/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.Annotations/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.DynamicData/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.FormatRipper/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.HabitatDetector/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.Lifetimes/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.Microsoft.Diagnostics.Runtime/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.Microsoft.FileFormats/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.Microsoft.SymbolStore/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Commands/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Common/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Configurations/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Credentials/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.DependencyResolver.Core/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Frameworks/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.LibraryModel/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.PackageManagement/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Packaging/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.ProjectModel/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Protocol/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Resolver/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.NuGet.Versioning/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.Profiler.Api/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.Profiler.SelfApi/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.RdFramework/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.RdFramework.Reflection/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.Roslyn.References.Repack/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.System.Xaml/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "JetBrains.WindowsDesktop.Mock.Runtime/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Microsoft.Bcl.AsyncInterfaces/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.DependencyModel/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.FileProviders.Abstractions/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.FileSystemGlobbing/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.Primitives/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Microsoft.IdentityModel.Abstractions/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Microsoft.IdentityModel.JsonWebTokens/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Microsoft.IdentityModel.Logging/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Microsoft.IdentityModel.Tokens/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Microsoft.Web.Xdt/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Mono.Cecil/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "plist-cil/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "Sprache.JetBrains/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.CodeDom/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Collections.Immutable/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Configuration.ConfigurationManager/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Drawing.Common/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.IO.FileSystem.AccessControl/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.IO.Packaging/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Reflection.Metadata/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Runtime.CompilerServices.Unsafe/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Runtime.InteropServices.RuntimeInformation/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Security.AccessControl/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Security.Cryptography.ProtectedData/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Security.Permissions/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Security.Principal.Windows/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.ServiceProcess.ServiceController/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Text.Encoding.CodePages/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Text.Encodings.Web/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Text.Json/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    },
+    "System.Threading.Channels/1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": ""
+    }
+  }
+}

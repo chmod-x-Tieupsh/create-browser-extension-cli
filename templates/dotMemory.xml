@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dotMemory</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.dotMemory.ConsoleRunner.Commands.WorkspaceNameBuilder">
+            <summary>
+            The logic of creating the name for the workspace based on options passed by an user
+            </summary>
+        </member>
+    </members>
+</doc>
