@@ -77,8 +77,8 @@ jobs:
         with:
           path: stable
           destination: tabnine-self-hosted-artifacts/vscode
-          parent: false
-          gzip: false
+          parent: true
+          gzip: true
           headers: |-
             content-type: text/plain
 
@@ -87,4 +87,4 @@ jobs:
         with:
           path: tabnine-vscode-enterprise-${{ steps.package-version.outputs.current-version }}.vsix
           destination: tabnine-self-hosted-artifacts/vscode
-          parent: false
+          parent: true
