@@ -7,7 +7,7 @@
   "description": "A cli tool to create browser extensions. Create a boilerplate project with common codebase and HMR for Chrome and firefox browsers.",
   "main": "bin/main.js",
   "dependencies": {
-    "commander": "^14.0.0",
+    "commander": "^14.0.2",
     "inquirer": "^8.1.0",
     "fs-extra": "^11.3.1",
     "chalk": "^4.1.2"
